@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Front</title>
+    <style>
+     /* Global Styles */
+body {
+	background-color: #f8f9fa; /* Svetla siva pozadina za svež izgled */
+	font-family: 'Arial', sans-serif; /* Moderni sans-serif font */
+	color: #343a40; /* Tamno siva boja teksta za dobar kontrast */
+	margin: 0;
+	padding: 0;
+	line-height: 1.6; /* Udoban razmak između redova */
+  }
+  
+  /* Navbar */
+  .navbar {
+	background-color: #343a40; /* Tamno siva pozadina */
+	border-bottom: 2px solid #007bff; /* Plava donja ivica za akcent */
+	padding: 15px 20px; /* Udoban padding */
+  }
+  
+  .navbar-brand {
+	font-size: 2rem; /* Veći tekst za brand */
+	color: #ffffff; /* Bela boja teksta */
+	font-weight: bold;
+  }
+  
+  /* Buttons */
+  .btn-outline-primary {
+	color: #007bff;
+	border: 2px solid #007bff;
+	font-weight: bold;
+	padding: 10px 20px;
+	background-color: #ffffff; /* Bela pozadina za dugme */
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+	background-color: #007bff; /* Plava pozadina pri prelasku mišem */
+	color: #ffffff;
+  }
+  
+  /* Container */
+  .container {
+	padding: 30px; /* Udoban padding */
+	max-width: 1200px; /* Maksimalna širina za centriranje sadržaja */
+	margin: auto; /* Automatsko centriranje */
+  }
+  
+  /* Product Cards */
+  .product-card {
+	background-color: #ffffff; /* Bela pozadina za kartice */
+	border: 1px solid #dee2e6; /* Suptilna svetlo siva ivica */
+	border-radius: 8px; /* Blagi zaobljeni uglovi */
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+	transform: scale(1.03); /* Blago uvećanje pri prelasku mišem */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Jača senka */
+  }
+  
+  .product-card img {
+	max-width: 100%; /* Slike se prilagođavaju veličini kartice */
+	border-bottom: 1px solid #dee2e6; /* Suptilna ivica ispod slike */
+	margin-bottom: 15px; /* Razmak između slike i teksta */
+  }
+  
+  .product-card h5 {
+	font-size: 1.25rem; /* Klasična veličina teksta za naslove */
+	color: #343a40;
+	margin-bottom: 10px;
+  }
+  
+  .product-card p {
+	font-size: 1rem; /* Normalna veličina teksta za opise */
+	color: #495057; /* Svetlo tamna boja teksta */
+  }
+  
+  /* Custom Button */
+  .btn-custom {
+	background-color: #007bff; /* Plava pozadina */
+	color: #ffffff;
+	font-weight: bold;
+	border: none;
+	padding: 10px;
+	margin-top: 10px;
+	width: 100%;
+	transition: background-color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+	background-color: #0056b3; /* Tamnija plava boja pri prelasku mišem */
+  }
+  
+  /* Cart Styles */
+  .cart {
+	background-color: #ffffff; /* Bela pozadina za korpu */
+	color: #343a40;
+	padding: 20px;
+	border: 1px solid #dee2e6; /* Suptilna svetlo siva ivica */
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka */
+  }
+  
+  .cart h4 {
+	color: #343a40;
+	font-weight: bold;
+  }
+  
+  .cart-items ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .cart-items ul li {
+	font-size: 1rem;
+	margin-bottom: 10px;
+	color: #495057; /* Svetlo tamna boja teksta */
+  }
+  
+  /* Checkout Button */
+  .btn-light {
+	background-color: #007bff; /* Plava pozadina */
+	color: #ffffff;
+	font-weight: bold;
+	border: none;
+	padding: 10px;
+	width: 100%;
+	transition: background-color 0.3s ease;
+  }
+  
+  .btn-light:hover {
+	background-color: #0056b3; /* Tamnija plava boja pri prelasku mišem */
+  }
+  
+  /* Footer */
+  .footer {
+	background-color: #343a40; /* Tamno siva pozadina */
+	color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	border-top: 2px solid #007bff; /* Plava gornja ivica */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.container {
+	  padding: 15px; /* Manji padding na manjim ekranima */
+	}
+	
+	.product-card {
+	  margin-bottom: 15px; /* Manji razmak između kartica */
+	}
+  }	
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">037 TechShop</a>
+        <button class="btn btn-outline-light" type="button">Home</button>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="row" id="cart-con">
+        <div class="col-md-9">
+          <div class="row" id="products-con">
+            <!-- Products will be dynamically added here -->
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="cart" id="cart">
+            <h4>Shopping Cart</h4>
+            <p id="cart-total">Total: $0</p>
+            <hr />
+            <div class="cart-items">
+              <p>Items bought:</p>
+              <ul id="cart-items-list"></ul>
+            </div>
+            <button class="btn btn-light btn-custom" id="checkout-button">
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="scrip.js"></script>
+  </body>
+</html>
